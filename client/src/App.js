@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
-import blogLogo from "./Assets/blogLogo.gif";
+import logo from "./assets/logo.svg";
 import Blogs from "./components/Blogs";
 import BlogPostsForm from "./components/BlogPostsForm";
 import useStyles from "./styles/app.styles.js";
@@ -27,7 +27,7 @@ function App() {
         >
           <img
             className={appStyles.image}
-            src={blogLogo}
+            src={logo}
             alt="icon"
             height="100"
           />

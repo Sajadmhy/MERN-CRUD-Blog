@@ -32,7 +32,7 @@ const BlogPostsForm = ({ blogPostId, setBlogPostId }) => {
     if (blogPostId === 0) {
       dispatch(addBlogPosts(blogInfo));
     } else {
-      dispatch(editBlogPosts(blogInfo));
+      dispatch(editBlogPosts(blogPostId, blogInfo));
     }
   };
 

@@ -14,11 +14,10 @@ app.use(bodyParser.json({ limit: "50mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors());
 
-// remember to add this after cors
 app.use("/api/blogs", blogPosts);
 
 const DB_CONNECTION = process.env.DATABASE_URL;
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 4000;
 
 mongoose
   .connect(DB_CONNECTION, {
@@ -31,3 +30,7 @@ mongoose
     )
   )
   .catch((error) => console.log(error));
+
+app.get('/', function(req, res, next) {
+  res.send("Hello Sajad!");
+});
